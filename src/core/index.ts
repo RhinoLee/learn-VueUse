@@ -1,5 +1,4 @@
 export * from './unrefElement'
-export * from './useDeviceOrientation'
 export * from './useEventListener'
 export * from './useMediaQuery'
 export * from './useMounted'

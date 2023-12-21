@@ -3,9 +3,10 @@ import type { MaybeRef, MaybeRefOrGetter } from '@/shared'
 import { toValue } from '@/shared'
 
 export type VueInstance = ComponentPublicInstance
+// 泛型 T 被規範為 MaybeElement 或 MaybeElement 的子類型
+export type MaybeElement = HTMLElement | SVGElement | VueInstance | undefined | null
 export type MaybeElementRef<T extends MaybeElement = MaybeElement> = MaybeRef<T>
 export type MaybeComputedElementRef<T extends MaybeElement = MaybeElement> = MaybeRefOrGetter<T>
-export type MaybeElement = HTMLElement | SVGElement | VueInstance | undefined | null
 
 export type UnRefElementReturn<T extends MaybeElement = MaybeElement> = T extends VueInstance
   ? Exclude<MaybeElement, VueInstance>

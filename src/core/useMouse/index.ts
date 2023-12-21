@@ -54,8 +54,11 @@ export interface UseMouseOptions extends ConfigurableWindow, ConfigurableEventFi
 }
 
 const UseMouseBuiltinExtractors: Record<UseMouseCoordType, UseMouseEventExtractor> = {
+  // 相對於整個 document
   page: (event) => [event.pageX, event.pageY],
+  // 相對於當前視窗
   client: (event) => [event.clientX, event.clientY],
+  // 相對於螢幕
   screen: (event) => [event.screenX, event.screenY],
   movement: (event) => (event instanceof Touch ? null : [event.movementX, event.movementY])
 } as const
