@@ -7,6 +7,11 @@ const router = createRouter({
       path: '/parallax',
       name: 'parallax',
       component: () => import('../views/ParallaxView.vue')
+    },
+    {
+      path: '/globalState',
+      name: 'globalState',
+      component: () => import('../views/GlobalStateView.vue')
     }
   ]
 })
