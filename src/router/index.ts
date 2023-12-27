@@ -12,6 +12,11 @@ const router = createRouter({
       path: '/globalState',
       name: 'globalState',
       component: () => import('../views/GlobalStateView.vue')
+    },
+    {
+      path: '/asyncState',
+      name: 'asyncState',
+      component: () => import('../views/AsyncStateView.vue')
     }
   ]
 })
